@@ -5,7 +5,9 @@ export function MainLayout() {
   return (
     <>
       <Header />
-      <Outlet />
+      <div className="flex h-full items-center justify-center bg-background">
+        <Outlet />
+      </div>
     </>
   );
 }

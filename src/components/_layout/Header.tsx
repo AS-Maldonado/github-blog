@@ -1,10 +1,13 @@
 import Cover from "../../assets/Cover.png";
+import Logo from "../../assets/Logo.png";
 
 export function Header() {
   return (
     <header
-      className="h-64 w-full bg-cover bg-center"
+      className="flex h-80 w-full items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: `url(${Cover})` }}
-    ></header>
+    >
+      <img src={Logo} alt="Github Blog Logo" />
+    </header>
   );
 }
