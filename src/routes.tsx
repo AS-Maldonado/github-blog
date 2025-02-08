@@ -8,7 +8,7 @@ export function AppRoutes() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path="/issue" element={<Issue />} />
+        <Route path="/issue/:number" element={<Issue />} />
       </Route>
     </Routes>
   );

@@ -5,7 +5,7 @@ export function MainLayout() {
   return (
     <>
       <Header />
-      <div className="flex h-full items-center justify-center bg-background">
+      <div className="flex h-full items-center justify-center">
         <Outlet />
       </div>
     </>

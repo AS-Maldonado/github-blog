@@ -1,4 +1,14 @@
-export function Search() {
+interface SearchProps {
+  setSearchText: (text: string) => void;
+}
+
+export function Search({ setSearchText }: SearchProps) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setTimeout(() => {
+      setSearchText(e.target.value);
+    }, 3000);
+  }
+
   return (
     <div>
       <div className="mb-4 flex items-center justify-between">
@@ -10,6 +20,7 @@ export function Search() {
         type="text"
         placeholder="Buscar conteúdo"
         className="w-full rounded-lg border border-border bg-input px-4 py-3 text-border placeholder:text-border"
+        onChange={(e) => handleChange(e)}
       />
     </div>
   );
